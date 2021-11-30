@@ -1,0 +1,35 @@
+{
+  "name": "it-bens/deqar-api-contracts",
+  "description": "DEQAR API models as contracts for further development.",
+  "type": "package",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Martin Bens",
+      "email": "martin.bens@it-bens.de"
+    }
+  ],
+  "require": {
+    "php": "^8.0"
+  },
+  "require-dev": {
+    "captainhook/plugin-composer": "^5.3",
+    "phpstan/phpstan": "^1.0",
+    "phpunit/phpunit": "^9.5",
+    "roave/security-advisories": "dev-latest"
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "sort-packages": true
+  },
+  "autoload": {
+    "psr-4": {
+      "ITB\\DeqarApiContracts\\": "src/"
+    }
+  },
+  "scripts": {
+    "post-autoload-dump": [
+      "vendor/bin/captainhook install -f -s"
+    ]
+  }
+}
