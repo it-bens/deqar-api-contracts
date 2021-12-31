@@ -19,20 +19,20 @@ interface Country
 
     public function getCountryCode(): CountryCode;
 
-    public function getEheaKeyCommitment(): CommitmentStatus;
+    public function getEheaKeyCommitmentStatus(): CommitmentStatus;
 
     public function getEqarGovernmentalMemberStart(): ?DateTimeImmutable;
 
-    public function getEuropeanApproachIsPermitted(): PermissionStatus;
+    public function getEuropeanApproachPermissionStatus(): PermissionStatus;
 
-    public function getExternalQaaIsPermitted(): PermissionStatus;
+    public function getExternalQaaPermissionStatus(): PermissionStatus;
 
     /**
      * @return Institution[]
      */
     public function getInstitutions(): iterable;
 
-    public function identify(): Id;
+    public function hasFullInstitutionList(): bool;
 
-    public function isHasFullInstitutionList(): bool;
+    public function identify(): Id;
 }
